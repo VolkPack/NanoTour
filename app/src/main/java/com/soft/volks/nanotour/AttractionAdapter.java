@@ -31,7 +31,7 @@ public class AttractionAdapter extends ArrayAdapter<Attraction> {
         }
 
         ImageView thumb = (ImageView) listItemView.findViewById(R.id.attraction_thumb);
-        thumb.setImageResource(currentAttraction.getmPhotoId());
+        thumb.setImageResource(currentAttraction.getmImgId());
 
         TextView title = (TextView) listItemView.findViewById(R.id.attraction_list_name);
         title.setText(currentAttraction.getmName());
