@@ -1,8 +1,11 @@
 package com.soft.volks.nanotour;
 
+import android.content.Intent;
 import android.support.annotation.ArrayRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -21,6 +24,16 @@ public class AttractionActivityList extends AppCompatActivity {
         AttractionAdapter listAdapter = new AttractionAdapter(this, attractions);
         ListView list = (ListView) findViewById(R.id.activity_attraction_list);
         list.setAdapter(listAdapter);
+
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                Intent intent = new Intent(AttractionActivityList.this, AttractionDetail.class);
+                intent.putExtra("ATTRACTION", attractions.get(position));
+                startActivity(intent);
+            }
+        });
 
 
 
