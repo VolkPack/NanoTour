@@ -13,7 +13,7 @@ import java.util.ArrayList;
  * Created by nkarayev on 10/26/16.
  */
 
-public class AttractionAdapter extends ArrayAdapter<Attraction> {
+public class  AttractionAdapter extends ArrayAdapter<Attraction> {
 
     public AttractionAdapter(Activity context, ArrayList<Attraction> attraction)
     {
@@ -39,3 +39,4 @@ public class AttractionAdapter extends ArrayAdapter<Attraction> {
         return listItemView;
     }
 }
+   

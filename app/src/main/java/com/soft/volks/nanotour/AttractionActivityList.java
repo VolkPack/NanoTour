@@ -20,7 +20,6 @@ public class AttractionActivityList extends AppCompatActivity {
 
         fillArray();
 
-
         AttractionAdapter listAdapter = new AttractionAdapter(this, attractions);
         ListView list = (ListView) findViewById(R.id.activity_attraction_list);
         list.setAdapter(listAdapter);
@@ -43,6 +42,10 @@ public class AttractionActivityList extends AppCompatActivity {
         int len;
         String[] names = getResources().getStringArray(R.array.attraction_names_PA);
         String[] address = getResources().getStringArray(R.array.attraction_address_PA);
+        ArrayList<Integer> imgID = new ArrayList<>();
+        imgID.add(R.drawable.pizzamyheart_mdpi);
+        ArrayList<Integer> photoId = new ArrayList<>();
+        photoId.add(R.drawable.pizzamyheart_hdpi);
 
         if(names.length == address.length){
             len = names.length;
@@ -60,7 +63,9 @@ public class AttractionActivityList extends AppCompatActivity {
             Attraction attraction = new Attraction();
             attraction.setmName(names[i]);
             attraction.setmAddress(address[i]);
-            attraction.setmImgId(R.drawable.temp_img); //TODO Add Images IDs
+            attraction.setmImgId(imgID.get(0));//TODO Add Images IDs
+            attraction.setmPhotoId(photoId.get(0));
+            attraction.setmDesc("STUFFSSSS");
             attractions.add(attraction);
 
         }

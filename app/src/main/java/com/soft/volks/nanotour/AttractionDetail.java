@@ -16,6 +16,12 @@ public class AttractionDetail extends AppCompatActivity {
         Intent intent = getIntent();
         Attraction attraction = (Attraction)intent.getSerializableExtra("ATTRACTION");
         TextView name = (TextView) findViewById(R.id.attraction_detail_name);
+        ImageView image = (ImageView) findViewById(R.id.attraction_detail_photo);
+        TextView desc = (TextView) findViewById(R.id.attraction_desc);
+        TextView place = (TextView) findViewById(R.id.attraction_address);
         name.setText(attraction.getmName());
+        place.setText(attraction.getmAddress());
+        image.setImageResource(attraction.getmPhotoId());
+        desc.setText(attraction.getmDesc());
     }
 }

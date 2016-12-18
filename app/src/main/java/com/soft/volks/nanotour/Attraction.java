@@ -12,6 +12,7 @@ public class Attraction implements Serializable{
     private String mAddress;
     private String mDesc;
     private int mImgId;
+    private int mPhotoId;
 
 
     public Attraction() {
@@ -62,7 +63,6 @@ public class Attraction implements Serializable{
         this.mPhotoId = mPhotoId;
     }
 
-    private int mPhotoId;
 
 
 
