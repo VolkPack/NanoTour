@@ -1,6 +1,5 @@
 package com.soft.volks.nanotour;
 
-import android.support.annotation.ArrayRes;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
@@ -17,13 +16,9 @@ public class AttractionActivityList extends AppCompatActivity {
 
         fillArray();
 
-
         AttractionAdapter listAdapter = new AttractionAdapter(this, attractions);
         ListView list = (ListView) findViewById(R.id.activity_attraction_list);
         list.setAdapter(listAdapter);
-
-
-
     }
 
     private void fillArray(){
@@ -39,15 +34,18 @@ public class AttractionActivityList extends AppCompatActivity {
             }else{
                 len = address.length;
             }
-
         }
-
         for(int i = 0; i < len; i++)
         {
             Attraction attraction = new Attraction();
             attraction.setmName(names[i]);
             attraction.setmAddress(address[i]);
-            attraction.setmImgId(R.drawable.temp_img); //TODO Add Images IDs
+            //TODO Add Images IDs
+            attraction.setmThumbId(R.drawable.temp_img);
+            //TODO Add Descriptions
+            //attraction.setmDesc();
+            //TODO Add Full Images
+            //attraction.setmFullImgId();
             attractions.add(attraction);
 
         }
